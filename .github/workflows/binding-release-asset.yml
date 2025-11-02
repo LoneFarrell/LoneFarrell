@@ -1,0 +1,21 @@
+name: Attach Binding ZIP on Release
+on:
+  release:
+    types: [published]
+permissions:
+  contents: write
+jobs:
+  package-and-attach:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create ZIP
+        run: |
+          mkdir -p dist
+          zip -r dist/sporenet-binding-${{ github.ref_name }}.zip sporenet/os-binding sporenet/summaries
+      - name: Upload to Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/sporenet-binding-${{ github.ref_name }}.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
