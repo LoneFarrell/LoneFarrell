@@ -1,34 +1,49 @@
-# Orbital Operating Systems
+# Orbital Operating Systems Logbook
 
 ![Golden OS orbits](./art/golden-os-orbits.svg)
 
-Hi, I’m **@LoneFarrell**—a systems thinker mapping technology practice around a constellation of operating systems, automation, and human-centered design.
+Hi, I’m **@LoneFarrell**—mapping a practice where automation, human-centered design, and wilderness reverence co-exist across operating systems.
 
-## OS Flight Deck
+## Orbit Map
 
-| OS | Mission Role | Core Stack | Current Focus |
-| --- | --- | --- | --- |
-| Linux | Rapid prototyping & self-hosting | NixOS • Docker • Tailscale | Automating research phones and edge nodes for community labs. |
-| macOS | Storycraft & creative assembly | Logic Pro • Affinity Suite • Raycast | Building narrative explainers that weave art, algebra, and future tech. |
-| Windows | Business ops & co-creation | Power BI • Excel • VS Code | Streamlining accounting automation with transparent reporting loops. |
+### Orbit 01 · Linux
+- **Mission Role**: Rapid prototyping, self-hosting, and resilient civic infrastructure pilots.
+- **Core Stack**: NixOS • Docker • Podman • Tailscale • WireGuard.
+- **Live Tasks**:
+  - Rolling out reproducible research phones for community labs and mutual-aid telemetry hubs.
+  - Building GitOps pipelines that schedule data-collection bursts without eroding privacy.
+
+### Orbit 02 · macOS
+- **Mission Role**: Narrative synthesis, multimedia assembly, and speculative strategy decks.
+- **Core Stack**: Logic Pro • Affinity Suite • Raycast • Runway • Stable Diffusion.
+- **Live Tasks**:
+  - Producing cinematic explainers that bind algebraic stories to climate-field reporting.
+  - Capturing on-site photography, then threading it into AI-assisted editorial workflows.
+
+### Orbit 03 · Windows
+- **Mission Role**: Cooperative finance, transparent analytics, and partner co-creation.
+- **Core Stack**: Power BI • Excel • VS Code • WSL2 • Power Automate.
+- **Live Tasks**:
+  - Automating compliance-friendly ledgers for small funds and grassroots treasuries.
+  - Maintaining joint workspaces that merge instrumentation, policy, and creative briefs.
 
 ## Daily Telemetry
 
-- 🌐 **Civic crypto & UBI pilots** – exploring incentive systems that stay accountable to people, not speculation.
-- 🎮 **Playable learning** – designing small, code-driven games that translate complex math into approachable stories.
+- 🌐 **Civic crypto & UBI pilots** – building accountable incentive systems focused on community care.
+- 🎮 **Playable learning** – shipping small code-driven games that translate complex math into approachable stories.
 - 🛰️ **Signal curation** – synthesizing AI, automation, and climate tech news into weekly field notes.
 
 ## Learning Trajectory
 
-- Container-native pipelines that keep research devices reproducible and secure.
-- Multimodal storytelling techniques to bridge outdoor photography with AI-assisted narration.
-- Ethical AI governance frameworks tuned for cooperative communities.
+- Hardening container-native pipelines so research devices remain reproducible and safe in the field.
+- Advancing multimodal storytelling to stitch outdoor photography, ambient sound, and AI narration.
+- Designing governance patterns for ethical AI that uplift cooperative communities.
 
 ## Collaboration Signals
 
-- Transparent fintech or accounting automation that puts clarity before growth hacks.
-- Experiential projects that celebrate wilderness while nudging mindful technology use.
-- Open-source experiments that invite people into the build loop early and often.
+- Transparent fintech or accounting automation that prioritizes clarity before growth hacks.
+- Experiential projects that celebrate wilderness while encouraging mindful technology use.
+- Open-source experiments that invite contributors into the build loop early and often.
 
 ## Connect
 
