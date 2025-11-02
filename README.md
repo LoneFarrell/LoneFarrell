@@ -1,36 +1,39 @@
-# Cultivation Algebra
+# Orbital Operating Systems
 
-![Cultivation Algebra inspiration](https://upload.wikimedia.org/wikipedia/commons/0/0e/Cultivation_Algebra.jpg)
+![Golden OS orbits](./art/golden-os-orbits.svg)
 
-Hi! I’m **@LoneFarrell**—a nature-loving technologist cultivating ideas where mathematics, automation, and social impact intersect.
+Hi, I’m **@LoneFarrell**—a systems thinker mapping technology practice around a constellation of operating systems, automation, and human-centered design.
 
-## Operating Systems (OS) Snapshot
+## OS Flight Deck
 
-| OS | Daily Driver Focus | Why it inspires me |
-| --- | --- | --- |
-| Linux | Research mining rigs & automation scripts | Open ecosystems make it easier to prototype blockchain concepts quickly. |
-| macOS | Design & storytelling | Smooth creative workflows help me pair art—like *Cultivation Algebra*—with emerging tech narratives. |
-| Windows | Collaboration & business tooling | Enterprise-friendly platforms keep accounting automation projects aligned with partners. |
+| OS | Mission Role | Core Stack | Current Focus |
+| --- | --- | --- | --- |
+| Linux | Rapid prototyping & self-hosting | NixOS • Docker • Tailscale | Automating research phones and edge nodes for community labs. |
+| macOS | Storycraft & creative assembly | Logic Pro • Affinity Suite • Raycast | Building narrative explainers that weave art, algebra, and future tech. |
+| Windows | Business ops & co-creation | Power BI • Excel • VS Code | Streamlining accounting automation with transparent reporting loops. |
 
-## What I’m Exploring
+## Daily Telemetry
 
-- **Blockchain & UBI experiments** – mapping equitable incentive systems for future communities.
-- **Code-driven games** – learning-through-play ideas that make complex topics approachable.
-- **Tech news curation** – staying sharp on AI, automation, and digital culture trends.
+- 🌐 **Civic crypto & UBI pilots** – exploring incentive systems that stay accountable to people, not speculation.
+- 🎮 **Playable learning** – designing small, code-driven games that translate complex math into approachable stories.
+- 🛰️ **Signal curation** – synthesizing AI, automation, and climate tech news into weekly field notes.
 
-## Currently Learning
+## Learning Trajectory
 
-- Docker-powered software stacks for research phones and IoT-style deployments.
-- Story-driven social media experiments that blend nature photography with AI development threads.
+- Container-native pipelines that keep research devices reproducible and secure.
+- Multimodal storytelling techniques to bridge outdoor photography with AI-assisted narration.
+- Ethical AI governance frameworks tuned for cooperative communities.
 
-## Collaboration Wishlist
+## Collaboration Signals
 
-- Accounting automation that pairs financial clarity with sales enablement.
-- Projects that celebrate the outdoors while nudging people toward mindful technology use.
+- Transparent fintech or accounting automation that puts clarity before growth hacks.
+- Experiential projects that celebrate wilderness while nudging mindful technology use.
+- Open-source experiments that invite people into the build loop early and often.
 
-## Connect with Me
+## Connect
 
-- 📧 **Email**: cfarrell929@gmail.com | cfarrell929@outlook.com
+- 📧 **Email**: cfarrell929@gmail.com · cfarrell929@outlook.com
 - 😄 **Pronouns**: he/him
+- 💬 **DMs**: GitHub Issues or Mastodon (@lonefarrell@indieweb.social)
 
-> “Cultivation is algebra—tend the equation, harvest the insight.”
+> “Align each orbit. Let the operating system guide the harvest.”
