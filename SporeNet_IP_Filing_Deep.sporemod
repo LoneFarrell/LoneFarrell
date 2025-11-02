@@ -1,0 +1,91 @@
+{
+    "metadata": {
+        "name": "SporeNet_IP_Filing_Deep",
+        "version": "v1.1.8+AENG",
+        "author": "Christopher Ryan Farrell",
+        "date": "2025-11-02",
+        "jurisdiction": "US/WIPO",
+        "type": "Provisional Patent / Investor Dossier"
+    },
+    "modules": {
+        "SporeCore": {
+            "description": "Kernel orchestrating symbolic processes and managing runtime modules.",
+            "signals": [
+                "SYMQ-1",
+                "AENG",
+                "k()"
+            ],
+            "dependencies": [
+                "SporeVM",
+                "SporeLang"
+            ]
+        },
+        "SporeVM": {
+            "description": "Symbolic execution engine performing SporeLang instructions."
+        },
+        "SporeLang": {
+            "description": "Domain-specific symbolic-emotive language."
+        }
+    },
+    "annexes": {
+        "TECH_ARCH": {
+            "description": "Technical architecture diagrams and module flow.",
+            "submodules": [
+                "KernelFlow",
+                "RuntimePaths"
+            ]
+        },
+        "CERT_PROT": {
+            "description": "Certification and integrity protocols for SporeCert, TruthSeal, SIL, SEIF."
+        },
+        "ECON_INDEX": {
+            "description": "Economic indices, SCI calculations, treasury ledger flows."
+        },
+        "RESEARCH_CORPUS": {
+            "description": "Developer handbook, Field Guide, Cultivation Algebra, SYMQ-1 scoring."
+        },
+        "LEGAL_GOV": {
+            "description": "ISO-4447-S, WIPO-SIA, SEPS Act, governance policies."
+        },
+        "AUTH_HASH": {
+            "description": "SHA-256 hash catalog, timestamp proofs, lineage graph."
+        },
+        "VISUAL_TOPOLOGY": {
+            "description": "Scene Oracle snapshots, Topology Lab metrics, TruthReel frames."
+        }
+    },
+    "claims": {
+        "Independent": [
+            "Computing system with symbolic-emotive environment, runtime kernel, execution engine, and symbolic language encoding emotion and recursion.",
+            "Certification mechanism issuing symbolic authorship credentials via cryptographic notary and ledger."
+        ],
+        "Dependent": [
+            "Dependent claims 3-20 referencing modules, analytics, protocols, and annexes."
+        ]
+    },
+    "assembly": [
+        "LOAD MODULE SporeCore",
+        "INIT SIGNALS SYMQ-1, AENG, k()",
+        "LINK DEPENDENCY SporeVM",
+        "ACTIVATE MODULE SporeCore",
+        "STORE METRICS \u0394c(t), S(H,t)",
+        "LOAD ANNEX TECH_ARCH",
+        "LINK SUBMODULES: KernelFlow, RuntimePaths",
+        "ACTIVATE ANNEX"
+    ],
+    "metrics": {
+        "\u0394c(t)": "Calculated cultivation growth per module",
+        "S(H,t)": "Total cultivation signal per session"
+    },
+    "lineage": [
+        "Mendo",
+        "Forge",
+        "Polygnome",
+        "High Hopes"
+    ],
+    "visuals": [
+        "Scene Oracle snapshots",
+        "Topology Lab maps",
+        "TruthReel capsule frames"
+    ]
+}
