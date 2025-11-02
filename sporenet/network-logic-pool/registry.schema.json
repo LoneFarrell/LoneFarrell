@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OSNLP Project Registry",
+  "type": "object",
+  "properties": {
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "repo", "license"],
+        "properties": {
+          "name": {"type": "string"},
+          "repo": {"type": "string", "description": "GitHub org/repo or URL"},
+          "license": {"type": "string"},
+          "tags": {"type": "array", "items": {"type": "string"}},
+          "category": {"type": "string"},
+          "description": {"type": "string"},
+          "homepage": {"type": "string"},
+          "docs": {"type": "string"},
+          "alignment": {
+            "type": "object",
+            "properties": {
+              "symq1": {"type": "number", "minimum": 0, "maximum": 1},
+              "iso_4447_s": {"type": "number", "minimum": 0, "maximum": 1},
+              "seif": {"type": "number", "minimum": 0, "maximum": 1}
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": ["projects"]
+}
