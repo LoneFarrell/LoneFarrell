@@ -7,8 +7,8 @@
 
 ## 2. Interests
 - 👀 blockchain
-- 👀 ubi
-- 👀 code-games
+- 👀 universal basic income (UBI)
+- 👀 code-driven games
 - 👀 tech news
 
 ## 3. Learning Focus
@@ -29,7 +29,7 @@
 ## 7. Fun Fact
 - ⚡ I love capturing nature photography for AI development, especially when it inspires playful social media storytelling.
 
-## Repository Status
+## 8. Repository Status
 
 This profile repository currently contains only this README. There are no runnable scripts, buildable projects, or development assets included, so commands such as `launch` or requests for a "cultivation algebra IDE" are not applicable here.
 
