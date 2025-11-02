@@ -25,3 +25,177 @@ jobs:
           files: dist/sporenet-binding-${{ github.ref_name }}.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+name: Binding Release Asset
+
+on:
+  push:
+    tags:
+      - "v*"                 # e.g., v1.1.9-pre+AENG_GitSnapshot_v2
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: "Release tag (e.g., v1.1.9-pre+AENG_GitSnapshot_v2)"
+        required: true
+        default: "v1.1.9-pre+AENG_GitSnapshot_v2"
+      release_name:
+        description: "Human title (e.g., SporeNet OS Snapshot v1.1.9-pre + AENG)"
+        required: true
+        default: "SporeNet OS Snapshot v1.1.9-pre + AENG"
+      prerelease:
+        description: "Mark as prerelease?"
+        type: boolean
+        required: true
+        default: true
+      bundle_prefix:
+        description: "File prefix (used in names)"
+        required: true
+        default: "SporeNet"
+
+permissions:
+  contents: write    # needed to create/upload release assets
+  id-token: none
+
+concurrency:
+  group: binding-release-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  PYTHONDONTWRITEBYTECODE: "1"
+  TZ: "UTC"
+
+jobs:
+  build-and-release:
+    name: Build bundle and publish release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Resolve inputs / derive tag & name
+        id: meta
+        run: |
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            TAG="${{ github.event.inputs.release_tag }}"
+            NAME="${{ github.event.inputs.release_name }}"
+            PRERELEASE="${{ github.event.inputs.prerelease }}"
+            PREFIX="${{ github.event.inputs.bundle_prefix }}"
+          else
+            # From pushed tag like refs/tags/v1.2.3
+            TAG="${GITHUB_REF#refs/tags/}"
+            NAME="SporeNet OS ${TAG}"
+            PRERELEASE="false"
+            PREFIX="SporeNet"
+          fi
+          DATE_UTC="$(date -u +%Y%m%d)"
+          TS_ISO="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          echo "tag=$TAG"           >> $GITHUB_OUTPUT
+          echo "name=$NAME"         >> $GITHUB_OUTPUT
+          echo "prerelease=$PRERELEASE" >> $GITHUB_OUTPUT
+          echo "date=$DATE_UTC"     >> $GITHUB_OUTPUT
+          echo "ts=$TS_ISO"         >> $GITHUB_OUTPUT
+          echo "prefix=$PREFIX"     >> $GITHUB_OUTPUT
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Build Truth Bundle, Manifest, and Hashes
+        id: build
+        run: |
+          set -euo pipefail
+          DIST="dist"
+          mkdir -p "$DIST"
+
+          BUNDLE_NAME="${{ steps.meta.outputs.prefix }}_TruthBundle_${{ steps.meta.outputs.date }}.zip"
+          MANIFEST_PATH="$DIST/MANIFEST.json"
+          HASH_PATH="$DIST/SHA256SUMS.txt"
+
+          # Build list of files (exclude noisy dirs)
+          echo "Collecting files…"
+          mapfile -t FILES < <(git ls-files)
+
+          # Create manifest
+          python - << 'PY'
+import json, os, hashlib, subprocess, sys
+from datetime import datetime, timezone
+from pathlib import Path
+
+dist = Path("dist")
+dist.mkdir(exist_ok=True)
+
+# Gather repo info
+def run(cmd):
+    return subprocess.check_output(cmd, text=True).strip()
+
+tag = os.environ.get("TAG") or ""
+name = os.environ.get("NAME") or ""
+ts = os.environ.get("TS") or ""
+files = [line.strip() for line in subprocess.check_output(["git","ls-files"], text=True).splitlines()]
+
+# Basic metadata
+meta = {
+    "meta": {
+        "os_version": f"SporeNet {tag}" if tag else "SporeNet Snapshot",
+        "binding_date_utc": ts or datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "commit": run(["git","rev-parse","HEAD"]),
+        "branch": run(["git","rev-parse","--abbrev-ref","HEAD"]),
+        "tag": tag,
+        "author": "Christopher Ryan Farrell",
+        "jurisdiction": "US/WIPO",
+        "signature": "@PGP_SIGNATURE_PENDING"
+    },
+    "files_included": files,
+}
+
+with open(dist/"MANIFEST.json","w", encoding="utf-8") as f:
+    json.dump(meta, f, indent=2)
+PY
+          export TAG="${{ steps.meta.outputs.tag }}"
+          export NAME="${{ steps.meta.outputs.name }}"
+          export TS="${{ steps.meta.outputs.ts }}"
+
+          # Zip the repo working tree (exclude a few patterns)
+          echo "Zipping working tree into $BUNDLE_NAME…"
+          zip -r "$DIST/$BUNDLE_NAME" . \
+            -x ".git/*" ".github/*" "node_modules/*" "**/__pycache__/*" "*.pyc" ".venv/*" ".mypy_cache/*"
+
+          # Add manifest to the zip root (update)
+          (cd "$DIST" && zip -u "$BUNDLE_NAME" "MANIFEST.json")
+
+          # Compute SHA256 for bundle and manifest
+          echo "Computing hashes…"
+          sha256sum "$DIST/$BUNDLE_NAME" > "$HASH_PATH"
+          sha256sum "$MANIFEST_PATH"    >> "$HASH_PATH"
+
+          # Write short summary for later steps
+          echo "bundle_path=$DIST/$BUNDLE_NAME" >> $GITHUB_OUTPUT
+          echo "manifest_path=$MANIFEST_PATH"   >> $GITHUB_OUTPUT
+          echo "hashes_path=$HASH_PATH"         >> $GITHUB_OUTPUT
+
+      - name: Upload run artifacts (for debugging / provenance)
+        uses: actions/upload-artifact@v4
+        with:
+          name: binding-assets-${{ steps.meta.outputs.tag || steps.meta.outputs.date }}
+          path: |
+            ${{ steps.build.outputs.bundle_path }}
+            ${{ steps.build.outputs.manifest_path }}
+            ${{ steps.build.outputs.hashes_path }}
+
+      - name: Create or update GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.meta.outputs.tag }}
+          name: ${{ steps.meta.outputs.name }}
+          prerelease: ${{ steps.meta.outputs.prerelease }}
+          draft: false
+          generate_release_notes: true
+          files: |
+            ${{ steps.build.outputs.bundle_path }}
+            ${{ steps.build.outputs.manifest_path }}
+            ${{ steps.build.outputs.hashes_path }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
