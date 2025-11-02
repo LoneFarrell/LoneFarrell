@@ -13,11 +13,13 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: '3.11' }
-      - run: pip install jsonschema
+      - run: pip install jsonschema requests
       - name: Generate signals
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python sporenet/network-logic-pool/tools/signals.py
       - name: Commit signals.json
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: 'chore(osnlp): update signals.json'
+          commit_message: 'chore(osnlp): update signals.json (GH-enriched)'
           file_pattern: sporenet/network-logic-pool/signals.json
