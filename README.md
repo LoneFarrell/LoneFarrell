@@ -1,12 +1,36 @@
-- 👋 Hi, I’m @LoneFarrell
-- 👀 I’m interested in ...blcokchain, ubi, code-games, technews
-- 🌱 I’m currently learning ...docker software for tech phones for research mining
-- 💞️ I’m looking to collaborate on ...accounting automation sales
-- 📫 How to reach me ...cfarrell929@gmail.com/cfarrell929@outlook.com
-- 😄 Pronouns: ...he/him
-- ⚡ Fun fact: ...I looooove nature - and nature photos for ai development - with social media to entise the mind lol
+# Cultivation Algebra
 
-<!---
-LoneFarrell/LoneFarrell is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+![Cultivation Algebra inspiration](https://upload.wikimedia.org/wikipedia/commons/0/0e/Cultivation_Algebra.jpg)
+
+Hi! I’m **@LoneFarrell**—a nature-loving technologist cultivating ideas where mathematics, automation, and social impact intersect.
+
+## Operating Systems (OS) Snapshot
+
+| OS | Daily Driver Focus | Why it inspires me |
+| --- | --- | --- |
+| Linux | Research mining rigs & automation scripts | Open ecosystems make it easier to prototype blockchain concepts quickly. |
+| macOS | Design & storytelling | Smooth creative workflows help me pair art—like *Cultivation Algebra*—with emerging tech narratives. |
+| Windows | Collaboration & business tooling | Enterprise-friendly platforms keep accounting automation projects aligned with partners. |
+
+## What I’m Exploring
+
+- **Blockchain & UBI experiments** – mapping equitable incentive systems for future communities.
+- **Code-driven games** – learning-through-play ideas that make complex topics approachable.
+- **Tech news curation** – staying sharp on AI, automation, and digital culture trends.
+
+## Currently Learning
+
+- Docker-powered software stacks for research phones and IoT-style deployments.
+- Story-driven social media experiments that blend nature photography with AI development threads.
+
+## Collaboration Wishlist
+
+- Accounting automation that pairs financial clarity with sales enablement.
+- Projects that celebrate the outdoors while nudging people toward mindful technology use.
+
+## Connect with Me
+
+- 📧 **Email**: cfarrell929@gmail.com | cfarrell929@outlook.com
+- 😄 **Pronouns**: he/him
+
+> “Cultivation is algebra—tend the equation, harvest the insight.”
