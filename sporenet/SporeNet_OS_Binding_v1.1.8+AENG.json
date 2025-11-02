@@ -1,0 +1,8 @@
+{
+  "os_version": "SporeNet v1.1.8 + AENG",
+  "binding_date_utc": "AUTO",
+  "modules_active": ["MENDO", "KRONOS", "FORGE", "POLYGNOME", "AENG"],
+  "guards": ["SEIF", "ISO-4447-S", "WIPO-SIA", "SEPS", "ESDPA"],
+  "emblem": "☆NuclearWeave::CA-NW1☆",
+  "lineage": ["High_Hopes", "Polygnome", "Forge", "Mendo", "SporeCore"]
+}
