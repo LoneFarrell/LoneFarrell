@@ -1,12 +1,30 @@
-- 👋 Hi, I’m @LoneFarrell
-- 👀 I’m interested in ...blcokchain, ubi, code-games, technews
-- 🌱 I’m currently learning ...docker software for tech phones for research mining
-- 💞️ I’m looking to collaborate on ...accounting automation sales
-- 📫 How to reach me ...cfarrell929@gmail.com/cfarrell929@outlook.com
-- 😄 Pronouns: ...he/him
-- ⚡ Fun fact: ...I looooove nature - and nature photos for ai development - with social media to entise the mind lol
+# SporeNet Account Summarizer
 
-<!---
-LoneFarrell/LoneFarrell is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+This project provides a standalone Python utility that converts a directory of
+textual account artifacts into a structured report. It extracts sentences from
+``.txt``, ``.md`` and ``.json`` files, assigns them to thematic domains, and
+generates both Markdown and JSON summaries suitable for SporeNet OS
+documentation workflows.
+
+## Usage
+
+```bash
+python account_summarizer.py --input ./account_dump --out ./summary --title "SporeNet Canon v1.1.8+AENG"
+```
+
+### Command-line options
+
+- `--input` / `-i`: Directory containing the source account files.
+- `--out` / `-o`: Destination directory for the generated Markdown and JSON
+  reports (created if missing).
+- `--title` / `-t`: Optional report title. Defaults to `SporeNet Account Summary`.
+- `--no-llm`: Skip the optional OpenAI-assisted refinement step even if an
+  `OPENAI_API_KEY` environment variable is present.
+
+The command emits two files into the output directory:
+
+1. `SporeNet_Account_Summary.md` — a human-readable report with executive
+   bullets, a canonical 100-sentence summary, domain inventories, and a timeline
+   section.
+2. `SporeNet_Account_Summary.json` — a machine-readable representation of the
+   same structure.
