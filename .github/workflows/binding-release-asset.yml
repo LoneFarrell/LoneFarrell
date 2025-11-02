@@ -1,7 +1,7 @@
 name: Attach Binding ZIP on Release
 on:
   release:
-    types: [published]
+    types: [published, created]
 permissions:
   contents: write
 jobs:
@@ -9,11 +9,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Create ZIP
+        with:
+          fetch-depth: 1
+      - name: Verify binding paths
+        run: |
+          test -d sporenet/os-binding || { echo 'Missing sporenet/os-binding'; exit 1; }
+          test -d sporenet/summaries || { echo 'Missing sporenet/summaries'; exit 1; }
+      - name: Create ZIP artifact
         run: |
           mkdir -p dist
-          zip -r dist/sporenet-binding-${{ github.ref_name }}.zip sporenet/os-binding sporenet/summaries
-      - name: Upload to Release
+          zip -r "dist/sporenet-binding-${GITHUB_REF_NAME}.zip" sporenet/os-binding sporenet/summaries
+      - name: Upload ZIP to release
         uses: softprops/action-gh-release@v2
         with:
           files: dist/sporenet-binding-${{ github.ref_name }}.zip
