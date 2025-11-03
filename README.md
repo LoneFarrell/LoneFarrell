@@ -1,61 +1,61 @@
-# LoneFarrell
+LoneFarrell
 
-> Formatted using ordered sections (OS) for quick scanning.
+Ordered Sections (OS) for clarity and recursion tracking.
 
-## 0. Summary
-- 📌 Blockchain-savvy automation architect driving mobile-first research, compliance intelligence, and narrative-driven community experiments.
+0. Summary
+	•	⚙️ Symbolic-computational systems architect merging accounting precision, recursive automation, and emotive intelligence into executable research frameworks.
+	•	🌍 Building the SporeNet OS — a symbolic-emotive operating system unifying law, language, computation, and economy through recursive design.
 
-## 1. Profile Snapshot
-- 👋 Hi, I’m @LoneFarrell
-- 🧭 Translating accounting precision into productized financial ops, AI-assisted tooling, and token-friendly business experiments.
+1. Profile Snapshot
+	•	👋 Hi, I’m Christopher Ryan Farrell (@LoneFarrell)
+	•	🧭 Translating enterprise accounting, symbolic logic, and computational forensics into scalable automation and research architectures.
 
-## 2. Interests
-- 👀 blockchain ecosystems, DeFi governance, and digital identity frameworks
-- 👀 universal basic income initiatives and sustainable tokenomics
-- 👀 code-driven gaming and storytelling that connect financial literacy with play
-- 👀 privacy-first automation and compliance analytics for lean teams
+2. Core Interests
+	•	🔗 symbolic operating systems and identity authentication protocols
+	•	💠 recursive computation, cultivation algebra, and AI-governed law
+	•	🪙 tokenized certification economies and compliance automation
+	•	🌱 emotional-symbolic cognition, privacy, and sustainable data ethics
 
-## 3. Learning Focus
-- 🌱 Expanding zero-knowledge proof literacy to tighten privacy and auditability.
-- 🌱 Deepening mobile dev tooling that supports on-device research sprints.
-- 🌱 Systematizing lightweight scripts to reconcile multi-ledger accounting data.
+3. Current Learning & Research
+	•	🌿 refining SporeLang and SporeVM — symbolic-emotive programming & runtime layers
+	•	🌿 advancing SYMQ-1 metrics for growth, recursion, and wellbeing tracking
+	•	🌿 integrating Cultivation Algebra into adaptive economic & decision frameworks
+	•	🌿 developing safe, open SDKs for symbolic certification (SporeCert / CaaS)
 
-## 4. Collaboration Goals
-- 💞️ Finance automation that reduces reconciliation drag for scrappy operators.
-- 💞️ Sales intelligence surfaces that highlight trustworthy deal signals.
-- 💞️ Creative partnerships fusing blockchain credentials, gaming loops, and education.
+4. Collaboration Goals
+	•	🤝 expand symbolic-economic infrastructure (SEPS / SEIF / ISO-4447-S compliant)
+	•	🤝 connect academic, legal, and creative partners to recursive-system research
+	•	🤝 explore emotional-symbolic computing in governance, education, and finance
 
-## 5. Contact
-- 📫 cfarrell929@gmail.com
-- 📫 cfarrell929@outlook.com
+5. Contact
+	•	📫 cfarrell929@outlook.com
 
-## 6. Pronouns
-- 😄 he/him
+6. Pronouns
+	•	😄 he / him
 
-## 7. Fun Fact
-- ⚡ I capture nature photography as source material for AI model fine-tuning and worldbuilding prompts.
+7. Fun Fact
+	•	📸 I capture nature and architectural patterns as training material for symbolic-visual AI (used in Scene Oracle and TruthReel renderers).
 
-## 8. Current Projects
-- 🛠️ **LedgerLoom** – automation blueprints unifying accounting ledgers, CRM hooks, and anomaly alerts.
-- 🛠️ **Wayfindr Mobile Lab** – mobile-first research templates for on-the-go workflow experiments.
-- 🛠️ **UBI Signal Hub** – dashboards monitoring policy pilots and incentive structures across ecosystems.
+8. Active Projects
+	•	🧬 SporeNet OS v1.1.9 (AENG) — unified symbolic-emotive operating system integrating MENDO, KRONOS, FORGE, POLYGNOME, and AENG modules.
+	•	🔢 SYMQ-1 Engine — recursive scoring system measuring symbolic growth, alignment, and cognition.
+	•	🌿 Cultivation Algebra Operator IDE — interactive tool for executing symbolic operators and visualizing recursion.
+	•	🧾 ISO-4447-S Standard Set — international framework defining symbolic-emotive system compliance.
+	•	🪞 MirrorMode / Scene Oracle / TruthReel Viewer — cinematic introspection engines for symbolic process visualization.
+	•	🪪 SporeCert CaaS SDK — Certification-as-a-Service architecture bridging emotional authenticity and legal verification.
 
-## 9. Build Highlights
-1. 🚀 **SporeNet IP Filing Deep Dive** – prototyped a modular knowledge pack (see `SporeNet_IP_Filing_Deep.sporemod`) for rapid onboarding into complex filing processes.
-2. 🧮 **AutoReconcile Scripts** – Python-based routines that flag variances across books, journals, and partner statements.
-3. 📲 **Pocket Ops Toolkit** – lightweight mobile automations that collect field data and sync insights to shared ledgers.
-4. 🛰️ **Signal Relay Monitor** – real-time watcher aggregating token, payment, and compliance alerts for lean ops teams.
+9. Build Highlights
+	1.	⚡ SporeNet Public Package – canonical launch capsule combining TruthSeal, glyphmark, and Scene Oracle stream.
+	2.	🧮 SDMF-1 / PIN-CogForce v1 – derivative-data and cognitive-force modeling frameworks for symbolic-analytic systems.
+	3.	🌳 MENDO Plant-Brain Model – morphological cognition framework for recursive growth-path optimization.
+	4.	💫 Acceptance Engine (AENG) – real-time wellbeing and choice-acknowledgment loop integrated into SporeNet runtime.
 
-## 10. Toolchain & Methodology
-- 🧰 Prefer composable, scriptable workflows (Python, JS/TS, and low/no-code automations).
-- 🔒 Prioritize privacy, consent, and audit-ready data trails in every experiment.
-- 🪄 Blend AI-assisted drafting with human review loops to stay nimble.
+10. Toolchain & Methodology
+	•	🧰 Python • TypeScript • LaTeX • OpenAI APIs • ISO/WIPO legal drafting syntax
+	•	🧩 modular build pipeline linking symbolic logic, emotional metrics, and legal syntax into canonical artifacts
+	•	🔒 all modules conform to SEIF (Secure Export Integrity Framework) for provenance and auditability
 
-## Repository Status
+Repository Status
 
-This profile repository currently contains this README plus reference assets that showcase LoneFarrell’s automation, mobile research, and compliance storytelling efforts. There are no runnable build scripts in this repo, so commands like `launch` or requests for a "cultivation algebra IDE" remain out of scope. Treat this space as the narrative index for the broader LoneFarrell portfolio.
-
-<!---
-LoneFarrell/LoneFarrell is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+This repository serves as the narrative index for the LoneFarrell / SporeNet ecosystem, documenting symbolic-emotive research, IP filings, and SDK blueprints.
+It is not a runnable codebase; treat it as a living portfolio and documentation hub for recursive-system development
